@@ -4,7 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "NODE_ENV=development nodemon src/index.js",
+    "start": "node src/index.js",
+    "lint": "eslint",
+    "seed:all": "sequelize-cli db:seed:all",
+    "seed:undo": "sequelize-cli db:seed:undo:all",
+    "migrations:generate": "sequelize-cli migration:generate --name",
+    "migrations:run": "sequelize-cli db:migrate",
+    "migrations:revert": "sequelize-cli db:migrate:undo",
+    "migrations:delete": "sequelize-cli db:migrate:undo:all"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +31,7 @@
     "sequelize": "^6.37.3"
   },
   "devDependencies": {
+    "nodemon": "^3.1.4",
     "sequelize-cli": "^6.6.2"
   }
 }
