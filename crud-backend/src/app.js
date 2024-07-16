@@ -15,6 +15,7 @@ const createApp = () => {
   require('./utils/auth');
 
   app.get('/', (req, res) => {
+    console.log('')
     res.send('Hola mi server en express');
   });
 
