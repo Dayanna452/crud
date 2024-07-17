@@ -22,8 +22,9 @@ type User {
   id: ID!
   name: String!
   email: String!
-  role: String!
+  role: String
   createdAt: String!
+  password: String!
 }
 
 input CreateUserInput {
