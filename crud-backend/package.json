@@ -28,6 +28,7 @@
     "express": "^4.19.2",
     "express-jwt": "^8.4.1",
     "graphql": "^16.9.0",
+    "graphql-passport": "^0.6.8",
     "joi": "^17.13.3",
     "jsonwebtoken": "^9.0.2",
     "nodemailer": "^6.9.14",

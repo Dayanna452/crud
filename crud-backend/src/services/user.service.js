@@ -1,7 +1,7 @@
-const boom = require('@hapi/boom');
-const bcrypt = require('bcrypt');
+const boom = require("@hapi/boom");
+const bcrypt = require("bcrypt");
 
-const { models } = require('../db/sequelize');
+const { models } = require("../db/sequelize");
 
 class UserService {
   constructor() {}
@@ -18,15 +18,13 @@ class UserService {
   }
 
   async find() {
-    const rta = await models.User.findAll({
-      include: ['customer']
-    });
+    const rta = await models.User.findAll({});
     return rta;
   }
 
   async findByEmail(email) {
     const rta = await models.User.findOne({
-      where: { email }
+      where: { email },
     });
     return rta;
   }
@@ -34,7 +32,7 @@ class UserService {
   async findOne(id) {
     const user = await models.User.findByPk(id);
     if (!user) {
-      throw boom.notFound('user not found');
+      throw boom.notFound("user not found");
     }
     return user;
   }

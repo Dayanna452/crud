@@ -1,5 +1,5 @@
-const bcrypt = require('bcrypt');
-const { USER_TABLE } = require('../models/user.model');
+const bcrypt = require("bcrypt");
+const { USER_TABLE } = require("../models/user.model");
 
 module.exports = {
   up: async (queryInterface) => {
@@ -8,17 +8,26 @@ module.exports = {
     }
     return queryInterface.bulkInsert(USER_TABLE, [
       {
-        email: 'admin@mail.com',
-        password: await bcrypt.hash('admin123', 10),
-        role: 'admin',
-        created_at: new Date()
+        email: "dully123@mail.com",
+        password: await bcrypt.hash("dully2006", 10),
+        role: "admin",
+        name: "Dully Flores",
+        created_at: new Date().toUTCString(),
       },
       {
-        email: 'customer@mail.com',
-        password: await bcrypt.hash('customer123', 10),
-        role: 'customer',
-        created_at: new Date()
-      }
+        email: "yrvin123@mail.com",
+        password: await bcrypt.hash("yrvin1403", 10),
+        role: "customer",
+        name: "Yrvin Villanueva",
+        created_at: new Date().toUTCString(),
+      },
+      {
+        email: "dina10@mail.com",
+        password: await bcrypt.hash("dina2807", 10),
+        role: "customer",
+        name: "Dina Flores",
+        created_at: new Date().toUTCString(),
+      },
     ]);
   },
   down: (queryInterface) => {
@@ -26,5 +35,5 @@ module.exports = {
       queryInterface = queryInterface.context;
     }
     return queryInterface.bulkDelete(USER_TABLE, null, {});
-  }
+  },
 };

@@ -24,13 +24,13 @@ class AuthService {
 
   signToken(user) {
     const payload = {
-      sub: user.id,
-      role: user.role
+      sub: user.dataValues.id,
+      role: user.dataValues.role
     }
     const access_token = jwt.sign(payload, config.jwtSecret);
     return {
-      user,
-      access_token
+      access_token,
+      user
     };
   }
 
