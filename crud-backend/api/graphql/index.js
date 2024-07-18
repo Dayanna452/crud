@@ -8,7 +8,7 @@ const { buildContext } = require("graphql-passport");
 
 const useGraphql = async (app) => {
   const server = new ApolloServer({
-    typeDefs: await loadFiles("./src/**/*.graphql"),
+    typeDefs: await loadFiles("./api/**/*.graphql"),
     resolvers,
     context: ({ req, res }) => buildContext({ req, res }),
     playground: true,
