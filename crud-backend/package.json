@@ -2,9 +2,9 @@
   "name": "frontend-rootmap",
   "version": "1.0.0",
   "description": "",
-  "main": "api/index.js",
+  "main": "index.js",
   "scripts": {
-    "dev": "SET NODE_ENV=development & node api/index.js",
+    "dev": "SET NODE_ENV=development & nodemon api/index.js",
     "start": "node api/index.js",
     "lint": "eslint",
     "seed:all": "sequelize-cli db:seed:all",
