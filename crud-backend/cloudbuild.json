@@ -36,6 +36,6 @@
   ],
   "options": {
      "logging": "GCS_ONLY",
-     "defaultLogsBucketBehavior":"REGIONAL_USER_OWNER_BUCKET"
+     "defaultLogsBucketBehavior": "REGIONAL_USER_OWNED_BUCKET"
   }
 }
