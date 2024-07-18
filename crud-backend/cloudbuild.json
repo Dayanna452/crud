@@ -58,7 +58,7 @@
      "defaultLogsBucketBehavior": "REGIONAL_USER_OWNED_BUCKET"
   },
   "images": [
-     "gcr.io/$PROJECT_ID/gcloud",
-     "gcr.io/$PROJECT_ID/gcloud-slim"
+     "gcr.io/${PROJECT_ID}/gcloud",
+     "gcr.io/${PROJECT_ID}/gcloud-slim"
    ]
 }
