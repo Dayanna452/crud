@@ -1,9 +1,6 @@
 services:
   postgres:
     image: postgres:13
-    build:
-      context: .
-      dockerfile: ./Dockerfile
     environment:
       - POSTGRES_DB=crudapp
       - POSTGRES_USER=admin
