@@ -7,7 +7,6 @@
     "dev": "SET NODE_ENV=development & nodemon src/index.js",
     "start": "node src/index.js",
     "lint": "eslint",
-    "build": "npm run build",
     "seed:all": "sequelize-cli db:seed:all",
     "seed:undo": "sequelize-cli db:seed:undo:all",
     "migrations:generate": "sequelize-cli migration:generate --name",
