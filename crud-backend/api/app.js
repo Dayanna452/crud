@@ -16,7 +16,10 @@ const createApp = async () => {
 
   app.get('/', (req, res) => {
     console.log('')
-    res.send('Hola mi server en express');
+    const response =`
+    <h1>Hola mi server en express</h1>
+    `
+    res.send(response);
   });
 
   app.get('/nueva-ruta', (req, res) => {
