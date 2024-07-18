@@ -33,5 +33,9 @@
            "CLOUDSDK_COMPUTE_ZONE=us-central1-a"
         ]
      }
-  ]
+  ],
+  "options": {
+     "logging": "GCS_ONLY",
+     "defaultLogsBucketBehavior":"REGIONAL_USER_OWNER_BUCKET"
+  }
 }
