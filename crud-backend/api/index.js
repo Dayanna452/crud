@@ -1,4 +1,4 @@
-const createApp = require("./api/app");
+const createApp = require("./app");
 
 (async () => {
   const port = process.env.PORT || 3000;
